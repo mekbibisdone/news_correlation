@@ -15,3 +15,9 @@ def count_country_mentions(text, countries):
                 re.findall(rf"\b{re.escape(country)}\b", text, flags=re.IGNORECASE)
             )
     return mention_counts
+
+
+def preprocess_text(text, stop_words):
+    text = text.lower()
+    text = " ".join([word for word in text.split() if word not in stop_words])
+    return text
