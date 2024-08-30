@@ -47,3 +47,13 @@ class NewsDataLoader:
         """
         df = pd.read_csv(f"{self.path}/traffic.csv")
         return df
+
+    def load_title_content_similarity(self):
+        """
+        Load title content similarity data from the csv file.
+
+        Returns:
+            pandas.DataFrame: Title content similarity data.
+        """
+        df = pd.read_csv(f"{self.path}/title_content_similarity.csv")
+        return df
